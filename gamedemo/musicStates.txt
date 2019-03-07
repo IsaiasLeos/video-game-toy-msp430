@@ -1,0 +1,75 @@
+#include "buzzer.h"
+
+void playMusic(){
+    switch(musicState){
+        case 0: 
+            buzzer_set_period(4000);
+            musicState = 1;
+            break;
+        case 1: 
+            buzzer_set_period(2000);
+            musicState = 2;
+            break;
+        case 2: 
+            buzzer_set_period(5000);
+            musicState = 3;
+            break;
+        case 3: 
+            buzzer_set_period(4000);
+            musicState = 4;
+            break;
+        case 4: 
+            buzzer_set_period(8000);
+            musicState = 5;
+            break;
+        case 5: 
+            buzzer_set_period(6000);
+            musicState = 6;
+        case 6: 
+            buzzer_set_period(7000);
+            musicState = 7;
+            break;
+        case 7: 
+            buzzer_set_period(8000);
+            musicState = 8;
+            break;
+        case 8: 
+            buzzer_set_period(9000);
+            musicState = 9;
+            break;
+        case 9: 
+            buzzer_set_period(4000);
+            musicState = 10;
+            break;
+        case 10: 
+            buzzer_set_period(2000);
+            musicState = 11;
+            break;
+        case 11: 
+            buzzer_set_period(7000);
+            musicState = 12;
+            break;
+        case 12: 
+            buzzer_set_period(8000);
+            musicState = 13;
+            break;
+        case 13: 
+            buzzer_set_period(7000);
+            musicState = 14;
+        case 14: 
+            buzzer_set_period(7000);
+            musicState = 15;
+            break;
+        case 15: 
+            buzzer_set_period(6000);
+            musicState = 16;
+            break;
+        case 16: 
+            buzzer_set_period(5000);
+            musicState = 0;
+            break;
+        default:
+            buzzer_set_period(0);
+            break;
+    }
+}
